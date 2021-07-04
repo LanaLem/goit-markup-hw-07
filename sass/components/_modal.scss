@@ -1,0 +1,9 @@
+.modal__submit-button {
+  @extend %button;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+    box-shadow: $shadow-button;
+  }
+}

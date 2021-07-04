@@ -1,0 +1,88 @@
+// шапка
+.page-header {
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+}
+
+.page-header__container {
+  @include flex(flex, center);
+}
+
+// навигация
+.navigation {
+  @include flex(flex, center);
+}
+
+.navigation__logo {
+  color: $accent-text-color;
+  font-family: $logo-font;
+  @include font(700, 26px, 1.192);
+
+  &--dark {
+    color: $black;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $title-text-color;
+
+  // выделение страницы, на которой находится пользователь
+  &--curent:visited {
+    color: $accent-text-color;
+  }
+}
+
+// подчеркивание и выделение страницы, на которой находится пользователь
+.navigation__item {
+  position: relative;
+
+  &--current::after {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -1px;
+
+    content: '';
+    background-color: $accent-text-color;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+  }
+}
+
+// контакты
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts__link {
+  @include flex(flex, center);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $primary-text-color;
+}
+
+.contacts__icons {
+  display: flex;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.navigation__item:not(:first-child),
+.contacts__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.navigation__link,
+.contacts__link {
+  @include font(500, 14px, 1.142);
+  letter-spacing: 0.02em;
+}
