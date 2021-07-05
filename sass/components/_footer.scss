@@ -16,7 +16,7 @@
     margin-bottom: 20px;
   }
   &--light {
-    color: var(--white);
+    color: $white;
   }
 }
 
@@ -32,6 +32,7 @@
 .address__location,
 .address__contacts {
   @include font(400, 14px, 1.714);
+  font-style: normal;
 }
 
 .address__location {

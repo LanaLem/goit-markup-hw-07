@@ -8,3 +8,9 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+@mixin position($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}

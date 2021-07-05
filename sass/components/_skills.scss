@@ -1,4 +1,4 @@
-/* секция скиллов */
+// секция скиллов
 .skills {
   padding-top: 0;
 }
@@ -22,6 +22,7 @@
 .skills__kind-of-app {
   position: absolute;
   bottom: 0;
+  left: 0;
   @include flex(flex, center);
   justify-content: center;
   width: 100%;
